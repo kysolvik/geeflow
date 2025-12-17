@@ -42,7 +42,7 @@ ConfigDict = mlc.ConfigDict | dict[str, Any]
 IC_SAMPLE_DATE_RANGES = ["Landsat7", "Landsat8", "Sentinel1", "Sentinel2",
                          "Alos", "ModisTerraVeg", "ModisSurfRefl", "ModisGPP",
                          "ModisET", "ModisBurn", "ModisFire", "FIRMS",
-                         "WorldPop", "DynamicWorld"]
+                         "WorldPop", "DynamicWorld", "AeEmbeddings"]
 IC_SAMPLE = ["Nicfi", "CIESIN", "GHSPop", "NAIP"]
 SAMPLE_ROI = ["NasaDem", "WorldCover", "FPP", "TPP", "Hansen", "LandCover",
               "WSF2015", "TreeCoverLossDueToFire", "CopDem", "FABDEM",

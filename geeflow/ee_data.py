@@ -1301,3 +1301,16 @@ class Era5(EeData):
       return "ECMWF/ERA5_LAND/MONTHLY_AGGR"
     if self.mode == "daily":
       return "ECMWF/ERA5_LAND/DAILY_AGGR"
+
+@dataclasses.dataclass
+class AeEmbeddings(EeData):
+  """Alpha Earth Embeddings."""
+  BANDS = ["{}{:02d}".format('A', i) for i in range(64)]
+
+  @property
+  def asset_name(self) -> str:
+    return "GOOGLE/SATELLITE_EMBEDDING/V1/ANNUAL"
+
+  @property
+  def ic(self):
+    return ee.ImageCollection(self.asset_name)
