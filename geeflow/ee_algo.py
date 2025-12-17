@@ -271,6 +271,8 @@ def get_ic_reduce_fn(
     if name == "reduceResolutionToMeanAndStd":
       reducer = ee.Reducer.mean().combine(ee.Reducer.stdDev(),
                                           sharedInputs=True)
+    elif name == "reduceResolutionToMean":
+      reducer = ee.Reducer.mean()
     elif name == "reduceResolutionToMeanAndStdAndMax":
       reducer = ee.Reducer.mean().combine(
           ee.Reducer.stdDev(), sharedInputs=True).combine(
